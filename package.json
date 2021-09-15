@@ -1,0 +1,24 @@
+{
+  "name": "my-personal-site",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "My personal website showing my skills and contact info",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheoryGame/my-personal-site.git"
+  },
+  "keywords": [
+    "personal",
+    "website"
+  ],
+  "author": "TheoryGame",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheoryGame/my-personal-site/issues"
+  },
+  "homepage": "https://github.com/TheoryGame/my-personal-site#readme"
+}
