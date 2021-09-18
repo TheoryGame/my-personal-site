@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/TheoryGame/my-personal-site/issues"
   },
-  "homepage": "https://github.com/TheoryGame/my-personal-site#readme"
+  "homepage": "https://github.com/TheoryGame/my-personal-site#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
 }
