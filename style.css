@@ -16,25 +16,24 @@ body {
 } 
 
 .profile-card {
-  width: 600px;
+  width: 800px;
   text-align: center;
   border-radius: 10px;
   overflow: hidden;
 }
 
 .card-header {
-  background: linear-gradient(-215deg, #0D2233, #3F6B8F);
-  padding: 40px;
+  background: linear-gradient(900deg, #0D2233, #3F6B8F);
+  padding: 60px;
 }
 
 .pic {
   display: inline-block;
-  padding: 8px;
-  background: linear-gradient(175deg, #3F6B8F, #D6D9E1);
+  background: linear-gradient(900deg, #0d2233, #3F6B8F, #D6D9E1);
   margin: auto;
   border-radius: 50%;
   background-size: 200% 200%;
-  animation: animated-gradient 2s linear infinite;
+  animation: animated-gradient 4s linear infinite;
 }
 
 @keyframes animated-gradient {
@@ -54,8 +53,8 @@ body {
 
 .pic img {
   display: block;
-  width: 120px;
-  height: 120px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
 }
 
@@ -75,8 +74,8 @@ body {
 .sm {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
-  margin-bottom: -10px;
+  margin-top: 40px;
+  margin-bottom: -50px;
 }
 
 .sm a{
@@ -90,20 +89,99 @@ body {
   color: #3F6B8F;
 }
 
-.show-skills {
+.show-skills-front {
   display: inline-block;
   padding: 8px;
   color: gainsboro;
   font-size: 16px;
   font-weight: 400;
   border: 2px solid #D6D9E1;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-top: 20px;
   transition: .4s linear;
+  animation: show-skills 3s 1;
 }
 
-.show-skills:hover {
+.show-skills-front:hover {
   background: #3F6B8F;
   color: gainsboro;
+}
 
+.skills {
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.skill-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #bfcbeb;
+  margin: 10px 0;
+}
+
+.skill-bar {
+  height: 10px;
+  background: #0D2233;
+  border-radius: 10px;
+}
+
+.skill-per {
+  height: 10px;
+  background: #bfcbeb;
+  border-radius: 10px;
+  position: relative;
+  animation: fillBar 5s 2;
+}
+
+.skill-per::before{
+  content: attr(per);
+  position: absolute;
+  padding: 2px 6px;
+  background: gainsboro;
+  border-radius: 10px;
+  font-size: 12px;
+  top: -30px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill-per::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: gainsboro;
+  top: -17px;
+  right: 0;
+  transform: translateX(80%) rotate(45deg);
+  border-radius: 3px;
+}
+
+@keyframes fillBar {
+  from{
+    width: 0;
+  }
+  to{
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes fillBar {
+  from{
+    width: 0;
+  }
+  to{
+    width: 70%;
+  }
+}
+
+@keyframes show-skills {
+  from {
+    width: 50%;
+  } to {
+    width: 22%
+  }
 }
